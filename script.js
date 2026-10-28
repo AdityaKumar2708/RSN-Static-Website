@@ -145,12 +145,10 @@ if (contactForm) {
         // Get form values
         const formData = new FormData(contactForm);
 
-        const name = String(formData.get('name') || '').trim();
-        const email = String(formData.get('email') || '').trim();
-        const phone = String(formData.get('phone') || '').trim();
-        const description = String(
-            formData.get('description') || ''
-        ).trim();
+const name = String(formData.get('user_name') || '').trim();
+const email = String(formData.get('user_email') || '').trim();
+const phone = String(formData.get('user_phone') || '').trim();
+const description = String(formData.get('message') || '').trim();
 
         // Validate required fields
         if (!name || !email || !phone || !description) {
